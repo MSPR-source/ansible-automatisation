@@ -1,0 +1,8 @@
+- name: Simuler incident sur le service Spooler (Windows Print Spooler)
+  hosts: windows
+  gather_facts: no
+  tasks:
+    - name: Arrêter le service Spooler
+      ansible.windows.win_service:
+        name: Spooler
+        state: stopped
