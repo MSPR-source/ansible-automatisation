@@ -1,0 +1,7 @@
+- name: Simuler panne VPN IPsec en arrêtant le service ipsec pfSense
+  hosts: pfsense
+  gather_facts: no
+  tasks:
+    - name: Arrêter le service IPsec sur pfSense
+      ansible.builtin.shell: pfSsh.php playback svc stop ipsec
+
